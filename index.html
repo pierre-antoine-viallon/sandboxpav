@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 5 – Showcase complet</title>
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
+  <style>
+    section.showcase { padding: 3rem 0; border-bottom: 1px solid var(--bs-border-color); }
+    section.showcase > .container > h2 { margin-bottom: 1.5rem; }
+    .demo-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--bs-secondary-color); margin: 1.5rem 0 .5rem; }
+    .swatch { height: 64px; border-radius: var(--bs-border-radius); }
+    .grid-demo .col, .grid-demo [class*="col-"] { background: var(--bs-primary-bg-subtle); border: 1px solid var(--bs-primary-border-subtle); padding: .75rem; text-align: center; }
+  </style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Bootstrap 5</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Basculer la navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#typographie">Typographie</a></li>
+        <li class="nav-item"><a class="nav-link" href="#grille">Grille</a></li>
+        <li class="nav-item"><a class="nav-link" href="#formulaires">Formulaires</a></li>
+        <li class="nav-item"><a class="nav-link" href="#composants">Composants</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Plus</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#overlays">Overlays</a></li>
+            <li><a class="dropdown-item" href="#utilitaires">Utilitaires</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Lien désactivé</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
+        <button class="btn btn-outline-light" type="submit">Rechercher</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="py-5 bg-body-tertiary">
+  <div class="container py-4">
+    <h1 class="display-4 fw-bold">Showcase Bootstrap 5.3</h1>
+    <p class="lead col-lg-8">Une page unique qui instancie l'ensemble des composants Bootstrap, pour tester l'import code → Figma.</p>
+    <a class="btn btn-primary btn-lg me-2" href="#composants">Voir les composants</a>
+    <a class="btn btn-outline-secondary btn-lg" href="#formulaires">Formulaires</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ TYPOGRAPHIE ============ -->
+<section class="showcase" id="typographie">
+  <div class="container">
+    <h2>Typographie</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h1>Titre h1</h1><h2>Titre h2</h2><h3>Titre h3</h3><h4>Titre h4</h4><h5>Titre h5</h5><h6>Titre h6</h6>
+        <p class="display-1">Display 1</p>
+        <p class="display-6">Display 6</p>
+      </div>
+      <div class="col-md-6">
+        <p class="lead">Paragraphe d'introduction (lead) pour ressortir du reste du contenu.</p>
+        <p>Paragraphe standard avec <strong>texte gras</strong>, <em>italique</em>, <u>souligné</u>, <s>barré</s>, <mark>surligné</mark>, <small>petit</small>, <code>code inline</code> et <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+        <blockquote class="blockquote">
+          <p>Une citation célèbre, dans un blockquote.</p>
+          <footer class="blockquote-footer">Auteur <cite title="Source">Source</cite></footer>
+        </blockquote>
+        <ul>
+          <li>Liste à puces</li><li>Deuxième élément<ul><li>Imbriqué</li></ul></li>
+        </ul>
+        <ol><li>Liste</li><li>Numérotée</li></ol>
+        <dl class="row">
+          <dt class="col-sm-3">Terme</dt><dd class="col-sm-9">Description du terme.</dd>
+          <dt class="col-sm-3">Autre</dt><dd class="col-sm-9">Autre description.</dd>
+        </dl>
+        <pre class="bg-body-secondary p-3 rounded"><code>const x = 42;
+console.log(x);</code></pre>
+      </div>
+    </div>
+
+    <p class="demo-label">Couleurs de texte et de fond</p>
+    <div class="row g-2">
+      <div class="col-6 col-md-3 col-lg-2"><div class="swatch bg-primary"></div><small>primary</small></div>
+      <div class="col-6 col-md-3 col-lg-2"><div class="swatch bg-secondary"></div><small>secondary</small></div>
+      <div class="col-6 col-md-3 col-lg-2"><div class="swatch bg-success"></div><small>success</small></div>
+      <div class="col-6 col-md-3 col-lg-2"><div class="swatch bg-danger"></div><small>danger</small></div>
+      <div class="col-6 col-md-3 col-lg-2"><div class="swatch bg-warning"></div><small>warning</small></div>
+      <div class="col-6 col-md-3 col-lg-2"><div class="swatch bg-info"></div><small>info</small></div>
+      <div class="col-6 col-md-3 col-lg-2"><div class="swatch bg-light border"></div><small>light</small></div>
+      <div class="col-6 col-md-3 col-lg-2"><div class="swatch bg-dark"></div><small>dark</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GRILLE ============ -->
+<section class="showcase" id="grille">
+  <div class="container">
+    <h2>Grille &amp; mise en page</h2>
+    <div class="row grid-demo g-2 mb-2">
+      <div class="col">col</div><div class="col">col</div><div class="col">col</div>
+    </div>
+    <div class="row grid-demo g-2 mb-2">
+      <div class="col-md-8">col-md-8</div><div class="col-md-4">col-md-4</div>
+    </div>
+    <div class="row grid-demo g-2 mb-2">
+      <div class="col-6 col-md-3">col-6 col-md-3</div><div class="col-6 col-md-3">col-6 col-md-3</div>
+      <div class="col-6 col-md-3">col-6 col-md-3</div><div class="col-6 col-md-3">col-6 col-md-3</div>
+    </div>
+    <p class="demo-label">Conteneurs (flex, gap)</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <div class="p-3 border rounded">Flex 1</div>
+      <div class="p-3 border rounded">Flex 2</div>
+      <div class="p-3 border rounded ms-auto">ms-auto</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULAIRES ============ -->
+<section class="showcase" id="formulaires">
+  <div class="container">
+    <h2>Formulaires</h2>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="nom@exemple.fr">
+        <div class="form-text">Nous ne partagerons jamais votre email.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="pwd" class="form-label">Mot de passe</label>
+        <input type="password" class="form-control" id="pwd">
+      </div>
+      <div class="col-md-4">
+        <label for="select" class="form-label">Sélection</label>
+        <select id="select" class="form-select"><option selected>Choisir…</option><option>Option 1</option><option>Option 2</option></select>
+      </div>
+      <div class="col-md-4">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date">
+      </div>
+      <div class="col-md-4">
+        <label for="file" class="form-label">Fichier</label>
+        <input type="file" class="form-control" id="file">
+      </div>
+      <div class="col-12">
+        <label for="txt" class="form-label">Message</label>
+        <textarea class="form-control" id="txt" rows="3"></textarea>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c1" checked><label class="form-check-label" for="c1">Case cochée</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c2"><label class="form-check-label" for="c2">Case non cochée</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c3" disabled><label class="form-check-label" for="c3">Désactivée</label></div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-check"><input class="form-check-input" type="radio" name="r" id="r1" checked><label class="form-check-label" for="r1">Radio 1</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="r" id="r2"><label class="form-check-label" for="r2">Radio 2</label></div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="sw" checked><label class="form-check-label" for="sw">Interrupteur</label></div>
+        <label for="range" class="form-label mt-2">Plage</label>
+        <input type="range" class="form-range" id="range">
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-text">@</span>
+          <input type="text" class="form-control" placeholder="Nom d'utilisateur" aria-label="Nom d'utilisateur">
+          <button class="btn btn-outline-secondary" type="button">OK</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="float" placeholder="Label flottant">
+          <label for="float">Label flottant</label>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="valid" class="form-label">Valide</label>
+        <input type="text" class="form-control is-valid" id="valid" value="Correct">
+        <div class="valid-feedback">Parfait !</div>
+      </div>
+      <div class="col-md-6">
+        <label for="invalid" class="form-label">Invalide</label>
+        <input type="text" class="form-control is-invalid" id="invalid" value="Erreur">
+        <div class="invalid-feedback">Ce champ est invalide.</div>
+      </div>
+      <div class="col-12"><button class="btn btn-primary" type="submit">Envoyer</button></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ COMPOSANTS ============ -->
+<section class="showcase" id="composants">
+  <div class="container">
+    <h2>Composants</h2>
+
+    <!-- Boutons -->
+    <p class="demo-label">Boutons</p>
+    <div class="d-flex flex-wrap gap-2 mb-2">
+      <button class="btn btn-primary">Primary</button><button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-success">Success</button><button class="btn btn-danger">Danger</button>
+      <button class="btn btn-warning">Warning</button><button class="btn btn-info">Info</button>
+      <button class="btn btn-light">Light</button><button class="btn btn-dark">Dark</button>
+      <button class="btn btn-link">Link</button>
+    </div>
+    <div class="d-flex flex-wrap gap-2 mb-2">
+      <button class="btn btn-outline-primary">Outline</button><button class="btn btn-outline-secondary">Outline</button>
+      <button class="btn btn-outline-success">Outline</button><button class="btn btn-outline-danger">Outline</button>
+      <button class="btn btn-primary btn-lg">Large</button><button class="btn btn-primary btn-sm">Small</button>
+      <button class="btn btn-primary" disabled>Désactivé</button>
+      <button class="btn btn-primary" type="button" disabled><span class="spinner-border spinner-border-sm" aria-hidden="true"></span> Chargement…</button>
+    </div>
+    <div class="btn-group mb-2" role="group" aria-label="Groupe de boutons">
+      <button class="btn btn-outline-primary active">Gauche</button><button class="btn btn-outline-primary">Milieu</button><button class="btn btn-outline-primary">Droite</button>
+    </div>
+    <div class="btn-group ms-2 mb-2">
+      <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Menu déroulant</button>
+      <ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Action</a></li><li><a class="dropdown-item" href="#">Autre action</a></li></ul>
+    </div>
+
+    <!-- Alertes -->
+    <p class="demo-label">Alertes</p>
+    <div class="alert alert-primary" role="alert">Alerte <strong>primary</strong></div>
+    <div class="alert alert-success" role="alert">Alerte <strong>success</strong></div>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">Alerte <strong>warning</strong> fermable
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button></div>
+    <div class="alert alert-danger" role="alert">Alerte <strong>danger</strong> avec <a href="#" class="alert-link">un lien</a></div>
+
+    <!-- Badges -->
+    <p class="demo-label">Badges</p>
+    <span class="badge text-bg-primary">Primary</span> <span class="badge text-bg-secondary">Secondary</span>
+    <span class="badge text-bg-success">Success</span> <span class="badge text-bg-danger">Danger</span>
+    <span class="badge rounded-pill text-bg-warning">Pill</span>
+    <button type="button" class="btn btn-primary position-relative ms-2">Messages
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span></button>
+
+    <!-- Cards -->
+    <p class="demo-label">Cards</p>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="160" role="img" aria-label="Image d'exemple"><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em" text-anchor="middle">Image</text></svg>
+          <div class="card-body"><h5 class="card-title">Titre de card</h5><p class="card-text">Texte d'exemple dans une card.</p><a href="#" class="btn btn-primary">Action</a></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-bg-dark h-100">
+          <div class="card-header">En-tête</div>
+          <div class="card-body"><h5 class="card-title">Card sombre</h5><p class="card-text">Contenu de la card.</p></div>
+          <div class="card-footer text-body-secondary">Pied de card</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Élément 1</li><li class="list-group-item">Élément 2</li><li class="list-group-item">Élément 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordéon -->
+    <p class="demo-label">Accordéon</p>
+    <div class="accordion" id="acc">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">Élément #1</button></h2>
+        <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#acc"><div class="accordion-body">Contenu du premier élément.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">Élément #2</button></h2>
+        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#acc"><div class="accordion-body">Contenu du deuxième élément.</div></div>
+      </div>
+    </div>
+
+    <!-- Onglets -->
+    <p class="demo-label">Onglets &amp; pills</p>
+    <ul class="nav nav-tabs" id="tabs" role="tablist">
+      <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#t1" type="button" role="tab" aria-controls="t1" aria-selected="true">Accueil</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t2" type="button" role="tab" aria-controls="t2" aria-selected="false">Profil</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link disabled" type="button" role="tab" aria-selected="false" tabindex="-1">Désactivé</button></li>
+    </ul>
+    <div class="tab-content border border-top-0 p-3">
+      <div class="tab-pane fade show active" id="t1" role="tabpanel">Contenu de l'onglet Accueil.</div>
+      <div class="tab-pane fade" id="t2" role="tabpanel">Contenu de l'onglet Profil.</div>
+    </div>
+    <ul class="nav nav-pills mt-3">
+      <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Lien</a></li>
+      <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Désactivé</a></li>
+    </ul>
+
+    <!-- Fil d'Ariane & pagination -->
+    <p class="demo-label">Fil d'Ariane &amp; pagination</p>
+    <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="#">Accueil</a></li><li class="breadcrumb-item"><a href="#">Bibliothèque</a></li><li class="breadcrumb-item active" aria-current="page">Données</li></ol></nav>
+    <nav aria-label="Pagination"><ul class="pagination">
+      <li class="page-item disabled"><a class="page-link" href="#">Précédent</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+    </ul></nav>
+
+    <!-- Progress -->
+    <p class="demo-label">Barres de progression &amp; spinners</p>
+    <div class="progress mb-2" role="progressbar" aria-label="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:25%">25%</div></div>
+    <div class="progress mb-2" role="progressbar" aria-label="Rayé" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar progress-bar-striped bg-success" style="width:60%"></div></div>
+    <div class="d-flex gap-3 align-items-center">
+      <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Chargement…</span></div>
+      <div class="spinner-grow text-danger" role="status"><span class="visually-hidden">Chargement…</span></div>
+    </div>
+
+    <!-- List group -->
+    <p class="demo-label">List group</p>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Élément actif</a>
+      <a href="#" class="list-group-item list-group-item-action">Élément lien</a>
+      <li class="list-group-item d-flex justify-content-between align-items-center" style="list-style:none">Avec badge <span class="badge text-bg-primary rounded-pill">14</span></li>
+      <a class="list-group-item list-group-item-action disabled" aria-disabled="true">Désactivé</a>
+    </div>
+
+    <!-- Tableau -->
+    <p class="demo-label">Tableaux</p>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle">
+        <caption>Exemple de tableau</caption>
+        <thead class="table-dark"><tr><th scope="col">#</th><th scope="col">Prénom</th><th scope="col">Nom</th><th scope="col">Statut</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1</th><td>Ada</td><td>Lovelace</td><td><span class="badge text-bg-success">Actif</span></td></tr>
+          <tr><th scope="row">2</th><td>Alan</td><td>Turing</td><td><span class="badge text-bg-warning">En attente</span></td></tr>
+          <tr class="table-danger"><th scope="row">3</th><td>Grace</td><td>Hopper</td><td><span class="badge text-bg-danger">Bloqué</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Carousel -->
+    <p class="demo-label">Carousel</p>
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"><svg width="100%" height="280" role="img" aria-label="Slide 1"><rect width="100%" height="100%" fill="#0d6efd"/><text x="50%" y="50%" fill="#fff" text-anchor="middle" font-size="28">Slide 1</text></svg><div class="carousel-caption d-none d-md-block"><h5>Premier slide</h5><p>Légende du slide.</p></div></div>
+        <div class="carousel-item"><svg width="100%" height="280" role="img" aria-label="Slide 2"><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#fff" text-anchor="middle" font-size="28">Slide 2</text></svg></div>
+        <div class="carousel-item"><svg width="100%" height="280" role="img" aria-label="Slide 3"><rect width="100%" height="100%" fill="#198754"/><text x="50%" y="50%" fill="#fff" text-anchor="middle" font-size="28">Slide 3</text></svg></div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Précédent</span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Suivant</span></button>
+    </div>
+
+    <!-- Placeholder -->
+    <p class="demo-label">Placeholders (skeleton)</p>
+    <div class="card" aria-hidden="true"><div class="card-body">
+      <h5 class="card-title placeholder-glow"><span class="placeholder col-6"></span></h5>
+      <p class="card-text placeholder-glow"><span class="placeholder col-7"></span> <span class="placeholder col-4"></span> <span class="placeholder col-8"></span></p>
+      <a class="btn btn-primary disabled placeholder col-4" aria-disabled="true"></a>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ OVERLAYS ============ -->
+<section class="showcase" id="overlays">
+  <div class="container">
+    <h2>Overlays</h2>
+    <div class="d-flex flex-wrap gap-2">
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDemo">Ouvrir la modale</button>
+      <button class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDemo">Ouvrir l'offcanvas</button>
+      <button class="btn btn-success" id="toastBtn">Afficher le toast</button>
+      <button class="btn btn-outline-dark" data-bs-toggle="tooltip" data-bs-title="Info-bulle">Tooltip</button>
+      <button class="btn btn-outline-dark" data-bs-toggle="popover" data-bs-title="Popover" data-bs-content="Contenu du popover.">Popover</button>
+      <button class="btn btn-outline-dark" data-bs-toggle="collapse" data-bs-target="#collapseDemo">Collapse</button>
+    </div>
+    <div class="collapse mt-3" id="collapseDemo"><div class="card card-body">Contenu repliable (collapse).</div></div>
+
+    <p class="demo-label">Modale (version statique)</p>
+    <div class="modal position-static d-block" tabindex="-1" style="position:static!important">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><h5 class="modal-title">Titre de la modale</h5><button type="button" class="btn-close" aria-label="Fermer"></button></div>
+          <div class="modal-body"><p>Contenu de la modale.</p></div>
+          <div class="modal-footer"><button type="button" class="btn btn-secondary">Fermer</button><button type="button" class="btn btn-primary">Enregistrer</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UTILITAIRES ============ -->
+<section class="showcase" id="utilitaires">
+  <div class="container">
+    <h2>Utilitaires</h2>
+    <div class="row g-3">
+      <div class="col-md-4"><div class="p-3 border rounded shadow-sm">shadow-sm</div></div>
+      <div class="col-md-4"><div class="p-3 border rounded shadow">shadow</div></div>
+      <div class="col-md-4"><div class="p-3 border rounded shadow-lg">shadow-lg</div></div>
+      <div class="col-md-4"><div class="p-3 bg-primary-subtle text-primary-emphasis rounded-3">rounded-3 + subtle</div></div>
+      <div class="col-md-4"><div class="p-3 bg-success-subtle text-success-emphasis rounded-pill text-center">rounded-pill</div></div>
+      <div class="col-md-4"><div class="p-3 border border-3 border-danger rounded-0">border-3 rounded-0</div></div>
+    </div>
+    <p class="demo-label">Images &amp; ratio</p>
+    <div class="row g-3 align-items-center">
+      <div class="col-md-4"><div class="ratio ratio-16x9"><svg role="img" aria-label="16x9"><rect width="100%" height="100%" fill="#adb5bd"/><text x="50%" y="50%" text-anchor="middle" dy=".3em">16x9</text></svg></div></div>
+      <div class="col-md-4"><svg class="img-thumbnail rounded-circle" width="140" height="140" role="img" aria-label="Avatar"><rect width="100%" height="100%" fill="#6c757d"/></svg></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="py-5 bg-dark text-white" data-bs-theme="dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><h5>Bootstrap 5 Showcase</h5><p class="text-body-secondary">Page de test pour Figma Code.</p></div>
+      <div class="col-md-6 text-md-end"><a class="link-light me-3" href="#">Mentions légales</a><a class="link-light" href="#">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Modale (instance JS) -->
+<div class="modal fade" id="modalDemo" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header"><h1 class="modal-title fs-5" id="modalLabel">Modale</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button></div>
+    <div class="modal-body">Corps de la modale.</div>
+    <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button><button type="button" class="btn btn-primary">Valider</button></div>
+  </div></div>
+</div>
+
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDemo" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header"><h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button></div>
+  <div class="offcanvas-body">Contenu du panneau latéral.</div>
+</div>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toastDemo" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header"><strong class="me-auto">Bootstrap</strong><small>à l'instant</small><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Fermer"></button></div>
+    <div class="toast-body">Ceci est un toast.</div>
+  </div>
+</div>
+
+<script src="dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => new bootstrap.Popover(el));
+  document.getElementById('toastBtn').addEventListener('click', () =>
+    bootstrap.Toast.getOrCreateInstance(document.getElementById('toastDemo')).show());
+</script>
+</body>
+</html>

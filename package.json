@@ -1,0 +1,29 @@
+{
+  "name": "bootstrap5-figma",
+  "version": "1.0.0",
+  "description": "Bootstrap 5 - page showcase pour tests Figma Code",
+  "scripts": {
+    "build:css": "sass --no-source-map --quiet-deps --silence-deprecation=import,global-builtin,color-functions,mixed-decls scss/custom.scss dist/css/bootstrap.css",
+    "build:js": "node -e \"require(\\\"fs\\\").copyFileSync(\\\"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\\\",\\\"dist/js/bootstrap.bundle.min.js\\\")\"",
+    "build": "npm run build:css && npm run build:js",
+    "start": "npm run build && npx --yes http-server . -p 8080 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierre-antoine-viallon/sandboxpav.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierre-antoine-viallon/sandboxpav/issues"
+  },
+  "homepage": "https://github.com/pierre-antoine-viallon/sandboxpav#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.107.1"
+  }
+}
