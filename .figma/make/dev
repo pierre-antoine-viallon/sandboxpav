@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+cd "$(dirname "$0")/../../bootstrap-figma"
+npm run build
+exec npx http-server . -a 0.0.0.0 -p "${PORT:-5173}" -c-1

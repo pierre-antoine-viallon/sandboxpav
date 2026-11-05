@@ -1,0 +1,10 @@
+{
+  "name": "sandboxpav",
+  "private": true,
+  "description": "Racine du repo : délègue à bootstrap-figma/",
+  "scripts": {
+    "install:app": "npm --prefix bootstrap-figma install",
+    "build": "npm --prefix bootstrap-figma run build",
+    "dev": "npm --prefix bootstrap-figma run serve"
+  }
+}

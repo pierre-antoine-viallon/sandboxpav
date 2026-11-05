@@ -6,7 +6,8 @@
     "build:css": "sass --no-source-map --quiet-deps --silence-deprecation=import,global-builtin,color-functions,mixed-decls scss/custom.scss dist/css/bootstrap.css",
     "build:js": "node -e \"require(\\\"fs\\\").copyFileSync(\\\"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\\\",\\\"dist/js/bootstrap.bundle.min.js\\\")\"",
     "build": "npm run build:css && npm run build:js",
-    "start": "npm run build && npx --yes http-server . -p 8080 -c-1"
+    "start": "npm run build && npm run serve",
+    "serve": "http-server . -a 0.0.0.0 -p 8080 -c-1"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "bootstrap": "^5.3.8"
   },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "sass": "^1.107.1"
   }
 }
