@@ -1,10 +1,14 @@
 {
-  "name": "sandboxpav",
+  "name": "minimal-vite-app",
   "private": true,
-  "description": "Racine du repo : délègue à bootstrap-figma/",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "install:app": "npm --prefix bootstrap-figma install",
-    "build": "npm --prefix bootstrap-figma run build",
-    "dev": "npm --prefix bootstrap-figma run serve"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0"
   }
 }

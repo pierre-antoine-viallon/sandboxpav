@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A minimal Vite starter configured for Figma Make."
+    />
+    <title>Vite Starter</title>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M13 2 4.5 13.1a1 1 0 0 0 .8 1.6h5.1L9.7 22 19.5 9.3a1 1 0 0 0-.8-1.6h-5.2L13 2Z" />
+          </svg>
+        </div>
+        <p class="eyebrow">Figma Make starter</p>
+        <h1 id="page-title">A clean place to begin.</h1>
+        <p class="lede">
+          Vite is installed, the development server is connected, and this
+          project is ready for your next idea.
+        </p>
+        <div class="actions">
+          <button class="primary" id="theme-toggle" type="button">
+            <span>Change atmosphere</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M4 10h12m-4-4 4 4-4 4" />
+            </svg>
+          </button>
+          <a class="secondary" href="https://vite.dev/guide/" target="_blank" rel="noreferrer">
+            Read the Vite guide
+          </a>
+        </div>
+      </section>
+
+      <aside class="status-card" aria-label="Project status">
+        <div class="status-heading">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>System ready</span>
+        </div>
+        <dl>
+          <div>
+            <dt>Runtime</dt>
+            <dd>Vite</dd>
+          </div>
+          <div>
+            <dt>Preview</dt>
+            <dd>Connected</dd>
+          </div>
+          <div>
+            <dt>Build</dt>
+            <dd>Static</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

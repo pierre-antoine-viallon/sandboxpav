@@ -1,4 +1,4 @@
-#!/bin/sh
-set -e
-cd "$(dirname "$0")/../../bootstrap-figma"
-npm install
+#!/usr/bin/env bash
+set -euo pipefail
+
+exec npm ci
