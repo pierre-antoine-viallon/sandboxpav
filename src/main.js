@@ -1,10 +1,20 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
+import { Collapse } from 'bootstrap'
 
-const toggle = document.querySelector('#theme-toggle')
+const navigation = document.querySelector('.navbar')
+const collapseElement = document.querySelector('#mainNav')
 
-toggle.addEventListener('click', () => {
-  const isWarm = document.body.classList.toggle('warm')
-  toggle.querySelector('span').textContent = isWarm
-    ? 'Restore atmosphere'
-    : 'Change atmosphere'
+const updateNavigation = () => {
+  navigation.classList.toggle('navbar-scrolled', window.scrollY > 24)
+}
+
+document.querySelectorAll('#mainNav .nav-link, #mainNav .btn').forEach((link) => {
+  link.addEventListener('click', () => {
+    const collapse = Collapse.getInstance(collapseElement)
+    collapse?.hide()
+  })
 })
+
+window.addEventListener('scroll', updateNavigation, { passive: true })
+updateNavigation()
